@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Absolutisme - Geschiedenis Havo 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="oefenen.html" class="nav-logo">← Terug naar oefenen</a>
+            <a href="index.html" class="nav-link">Home</a>
+        </div>
+    </nav>
+
+    <main class="quiz-page">
+        <div class="quiz-container-adaptive">
+            <header class="quiz-header">
+                <h1>👑 Absolutisme</h1>
+                <p class="quiz-instruction">Bepaal of de volgende situaties over <strong>verandering</strong> of <strong>continuïteit</strong> gaan</p>
+                <div class="quiz-progress">
+                    <span class="progress-text">Vraag <span id="current-q">1</span> van 10</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="quiz-content" id="quiz-content">
+                <div class="question-card">
+                    <div class="question-number">Vraag <span id="q-number">1</span></div>
+                    <div class="difficulty-indicator">
+                        <span class="diff-label">Niveau:</span>
+                        <span class="diff-badge" id="diff-badge">Gemiddeld</span>
+                    </div>
+                    
+                    <div class="situation-box">
+                        <h3>Situatie:</h3>
+                        <p id="situation-text"></p>
+                    </div>
+
+                    <div class="event-box">
+                        <h3>Gebeurtenis/Aspect:</h3>
+                        <p id="event-text"></p>
+                    </div>
+
+                    <div class="question-prompt">
+                        <p>Is dit een voorbeeld van <strong>verandering</strong> of <strong>continuïteit</strong>?</p>
+                    </div>
+
+                    <div class="answer-buttons">
+                        <button class="answer-btn change-btn" onclick="submitAnswer('verandering')">
+                            🔄 Verandering
+                        </button>
+                        <button class="answer-btn continuity-btn" onclick="submitAnswer('continuiteit')">
+                            ⚖️ Continuïteit
+                        </button>
+                    </div>
+
+                    <div class="feedback-box" id="feedback-box"></div>
+                </div>
+            </div>
+
+            <div class="quiz-result-page" id="result-page">
+                <h2>Resultaten</h2>
+                <div class="score-circle">
+                    <div class="score-value" id="final-score">0/10</div>
+                    <p class="score-label">Correct</p>
+                </div>
+
+                <div class="result-message" id="result-message"></div>
+
+                <div class="detailed-feedback" id="detailed-feedback"></div>
+
+                <div class="action-buttons">
+                    <button class="action-btn primary" onclick="restartQuiz()">Opnieuw proberen</button>
+                    <a href="info-absolutisme.html" class="action-btn secondary">Bestudeer de stof</a>
+                    <a href="oefenen.html" class="action-btn secondary">Kies ander onderwerp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="home-footer">
+        <p>&copy; 2025 Geschiedenis Havo 4</p>
+    </footer>
+
+    <script src="quiz-data-absolutisme.js"></script>
+    <script src="quiz-engine.js"></script>
+</body>
+</html>
